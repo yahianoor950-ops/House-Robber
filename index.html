@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>House Robber</title>
+</head>
+<body>
+  <main class="container">
+    <header class="page-head">
+      <h1>House Robber</h1>
+      <p>صف بيوت في كل بيت فلوس، ومينفعش تسرق بيتين جنب بعض. إيه أكبر مبلغ تقدر تاخده؟</p>
+    </header>
+    <section class="card" id="setup">
+      <h2>المدخلات</h2>
+      <div class="field">
+        <label for="count">عدد البيوت</label>
+        <input type="number" id="count" min="1" max="10" value="5">
+      </div>
+      <div class="field">
+        <label>الفلوس اللي في كل بيت</label>
+        <div id="houses" class="coin-inputs"></div>
+      </div>
+      <p id="error" class="error" role="alert" hidden></p>
+      <div class="actions">
+        <button id="start" class="btn primary">ابدأ الحل</button>
+        <button id="example" class="btn ghost">مثال جاهز (2، 7، 9، 3، 1)</button>
+      </div>
+    </section>
+    <section id="solver" hidden>
+      <div class="card controls">
+        <span id="counter" class="counter"></span>
+        <div class="actions">
+          <button id="prev" class="btn ghost">الخطوة السابقة</button>
+          <button id="next" class="btn primary">الخطوة التالية</button>
+          <button id="play" class="btn ghost">تشغيل تلقائي</button>
+          <button id="skip" class="btn ghost">اذهب للنتيجة</button>
+          <button id="restart" class="btn ghost">من البداية</button>
+        </div>
+      </div>
+      <div class="card">
+        <h2>جدول الحل</h2>
+        <div id="tableWrap" class="table-wrap" dir="ltr"></div>
+      </div>
+      <div class="card" id="stepCard">
+        <h2 id="stepTitle"></h2>
+        <div id="stepBody"></div>
+      </div>
+      <div class="card" id="results" hidden></div>
+    </section>
+  </main>
+    <script src="main.js"></script>
+</body>
+</html>
